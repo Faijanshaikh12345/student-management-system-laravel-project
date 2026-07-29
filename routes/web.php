@@ -13,6 +13,8 @@ use App\Http\Controllers\SubjectController;
 use App\Http\Controllers\TeacherController;
 use Illuminate\Support\Facades\Route;
 
+Route::get('/', [DashboardController::class, 'showLoginForm'])->name('index');
+
 Route::get('login', [AdminAuthController::class, 'showLoginForm'])->name('login');
 Route::post('login', [AdminAuthController::class, 'login'])->name('login.post');
 Route::post('logout', [AdminAuthController::class, 'logout'])->name('logout');
